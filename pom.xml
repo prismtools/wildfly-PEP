@@ -848,6 +848,12 @@
                 </exclusions>
             </dependency>
 
+            <dependency>
+                <groupId>org.keycloak</groupId>
+                <artifactId>keycloak-policy-enforcer</artifactId>
+                <version>${keycloak.version}</version>
+            </dependency>
+
         </dependencies>
 
     </dependencyManagement>

@@ -1,0 +1,10 @@
+This fork of the wildfly repository has modified the pom.xml file to include the Policy Enforcement Point 
+{PEP} from Keycloak into the build, as describe in the Keycloak Authorization documentation under the 
+"Policy Enforers" section (https://www.keycloak.org/docs/latest/authorization_services/index.html#_enforcer_overview).
+
+The PEP filters requests to resources (e.g. RESTful services, web pages) managed by the wildfly server
+according to policies set by the user in Keycloak.  The wildfly server plays the role of "resource provider" in 
+the UMA 2.0 world that makes up Keycloak authorization.  The wildfly server would need to be set up in Keycloak 
+as a client with Client Authorization turned on.  The User (the entity managing the access policies) would need 
+to set up polices to protect resources in wildfly, based on who is currently logged in.  When an administrator 
+turns on Client Authorization, the Keycloak Administration Console sets up a default access rule.
